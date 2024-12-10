@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(172, 191, 245);
+  margin: 0;
+  padding: 0;
+}
+
+/*Heading*/
+h1 {
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 3px -1px 30px rgb(73, 47, 187);
+  
+  font-size: 2.8rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Nav bar*/
+nav {
+  background-color:  hsl(227, 70%, 93%);
+  padding: 10px;
+  text-align: start;
+}
+nav a {
+  color: hsl(255, 100%, 40%);
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 8px;
+}
+nav a:hover {
+  color: blue;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/*Form, Search box*/
+.form-container {
+  background-color: hsl(0, 0%, 90%);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  gap: 20px;
+}
+form button {
+  background-color: rgb(67, 20, 110);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+form button:hover {
+  background-color: hsl(192, 90%, 35%);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+form label, .search-box label {
+  font-weight: bold;
+}
+form input, .search-box input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 200px;
+  background-color: hsl(0, 0%, 97%);
+}
+
+
+/*Player Cards*/
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 10px 10px 0px;
+  width: 100%;
+}
+.players-card {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.1);
+  background-color: hsl(0, 0%, 99%);
+  text-align: center;
+  width: 20%;
+  transition: 0.2s ease;
+}
+.players-card:hover {
+  transform: scale(0.9);
+  box-shadow: 0 2px 20px blue;
+  border: 1px solid blue;
+  opacity: 0.5;
+}
+
+.players-card h3 {
+  color: #34495e;
+}
+.players-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.players-card button, .selected-card button {
+  padding: 10px 15px;
+  margin: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.detailBtn {
+  background-color: hsl(216, 100%, 50%);
+  cursor: pointer;
+}
+.deleteBtn {
+  background-color: hsl(0, 100%, 50%);
+}
+.detailBtn:hover {
+  background-color: hsla(216, 100%, 50%, 0.24);
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  background-color: hsl(0, 100%, 50%, 0.24);
+  cursor: pointer;
+}
+
+/*Single Card*/
+.selected-card {
+  border: 1px solid #ddd;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.1);
+  background-color: white;
+  text-align: center;
+  width: 30%;
+  font-size: large;
+  transition: 0.2s ease;
+}
+.selected-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 20px blue;
+}
+
+.selected-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/*Error message*/
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px;
+}
