@@ -14,7 +14,8 @@ const NewPlayerForm = ({setFetchToggle}) => {
         if (result && result.success) {
             setName("");
             setBreed("");
-            setFetchToggle((prev)=>!prev);
+            setImageUrl("");
+            setFetchToggle((prev) => ! prev);
         } else {
             console.error("Failed to add player!");
         }
@@ -24,15 +25,15 @@ const NewPlayerForm = ({setFetchToggle}) => {
     <form onSubmit={handleSubmit}>
         <label>
             Name: {" "}
-            <input type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
         </label>
         <label>
             Breed: {" "}
-            <input type="text" value={breed} onChange={(e)=>setBreed(e.target.value)}/>
+            <input type="text" value={breed} onChange={(e) => setBreed(e.target.value)}/>
         </label>
         <label>
             Image Url: {" "}
-            <input type="text" value={imageUrl} onChange={(e)=>setImageUrl(e.target.value)}/>
+            <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}/>
         </label>
         <button type="submit">Submit</button>
     </form>

@@ -14,7 +14,6 @@ const AllPlayers = () => {
   useEffect(() => {
     async function getAllPlayers() {
       const APIResponse = await fetchAllPlayers();
-      // console.log(APIResponse.data.players);
       if (APIResponse.success) {
         setPlayers(APIResponse.data.players);
       } else {
