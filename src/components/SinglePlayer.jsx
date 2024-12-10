@@ -33,10 +33,10 @@ const SinglePlayer = () => {
         <>
         {selectedPlayer && (
         <div className="selected-card">
-            <img src={`${selectedPlayer.imageUrl}`} alt="puppy image"/>
+            <img src= {`${selectedPlayer.imageUrl}`} alt= {`Image of ${selectedPlayer}`}/>
             <p>Name: {selectedPlayer.name}</p>
             <p>Breed: {selectedPlayer.breed}</p>
-            <button className="deleteBtn" onClick={()=>handleDelete()}>Delete Player</button>
+            <button className= "deleteBtn" onClick= {() => handleDelete()}>Delete Player</button>
         </div>)}
 
         {error && <p className="error">{error}</p>}

@@ -9,7 +9,7 @@ const NewPlayerForm = ({setFetchToggle}) => {
     async function handleSubmit(e) {
         e.preventDefault();
 
-        const result = await addPlayer(name,breed);
+        const result = await addPlayer(name,breed,imageUrl);
         
         if (result && result.success) {
             setName("");
