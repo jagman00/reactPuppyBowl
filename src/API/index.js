@@ -21,12 +21,12 @@ export async function fetchSinglePlayer(id) {
     }
 }
 
-export async function addPlayer(name,breed) {
+export async function addPlayer(name,breed,imageUrl) {
     try {
         const response = await fetch (API, {
             method: "POST",
             headers: {"Content-Type":"application/json"},
-            body: JSON.stringify({name,breed})
+            body: JSON.stringify({name,breed,imageUrl})
         });
         const result = await response.json();
         return result;
